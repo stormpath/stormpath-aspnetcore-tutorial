@@ -7,6 +7,7 @@ using Microsoft.AspNet.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
+using Stormpath.AspNetCore;
 
 namespace StormpathAspNetCoreTutorial
 {
@@ -26,6 +27,8 @@ namespace StormpathAspNetCoreTutorial
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddStormpath();
+
             // Add framework services.
             services.AddMvc();
         }
@@ -48,6 +51,8 @@ namespace StormpathAspNetCoreTutorial
             app.UseIISPlatformHandler();
 
             app.UseStaticFiles();
+
+            app.UseStormpath();
 
             app.UseMvc(routes =>
             {
