@@ -1,29 +1,4 @@
 # Build an ASP.NET Core Application With User Authentication
 Original post: [Build an ASP.NET Core Application With User Authentication](https://stormpath.com/blog/asp-net-core-authentication)
 
-## Try it out
-
-1. If you haven't registered for Stormpath, [create a free developer account](https://api.stormpath.com/register).
-2. Click the **Create API Key** or **Manage Existing Keys** under Developer Tools on the right side of the page. 
-3. Scroll down to Security Credentials and click **Create API Key**. This will generate your API Key and download it to your computer as an `apiKey.properties` file.
-3. Open the `apiKey.properties` file up in Notepad (or your favorite editor). Using the command line (or PowerShell), execute these commands:
-
- ```
- setx STORMPATH_CLIENT_APIKEY_ID "[value from properties file]"
- setx STORMPATH_CLIENT_APIKEY_SECRET "[value from properties file]"
- ```
- 
-4. Back in the Stormpath Admin Console, navigate to **Applications** and find the default application that's created for you when you sign up for Stormpath (called "My Application"). Select it and copy the **Href** value (it'll look like ``https://api.stormpath.com/v1/applications/l0ngR4nd0mStringH3r3``).
-5. Save the Application URL as another environment variable:
-
- ```
- setx STORMPATH_APPLICATION_HREF "[your Application href]"
- ```
- 
-6. Clone this repo!
-
- ```
- git clone https://github.com/stormpath/stormpath-aspnetcore-tutorial.git
- ```
-
-7. Open `StormpathAspNetCoreTutorial.sln`. Compile and run!
+This example has been moved to [stormpath-aspnetcore-example](https://github.com/stormpath/stormpath-aspnetcore-example). Head over there to get the latest code!
